@@ -21,6 +21,7 @@ app.use('', appRouter);
 require('./Routers')(appRouter);
 require('./API_Route')(appRouter);
 
+// const connectMongo = require('./config/connectMongo');
 // This function return promiss if mongoDB connection succeed
 connectMongo()
     .then(() => {

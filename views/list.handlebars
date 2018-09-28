@@ -1,0 +1,16 @@
+{{#each student}}
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <h5 class="card-title">{{age}}</h5>
+    {{#each language}}
+    <h5 class="card-title">{{title}}</h5>
+    {{/each}}
+    <a href="/students/edit/{{id}}" class="btn btn-block btn-success">Edit</a>
+    <form action="/students/{{id}}?_method=DELETE" method="post">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" class="btn btn-block btn-danger mt-1" value="Delete">
+    </form>
+  </div>
+</div>
+{{/each}}
